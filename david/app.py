@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
 
-    text = "Hello, DevOps."
+    text = "Hello, DevOps. re-test..."
 
     lang = request.args.get('lang', DEFAULT_LANG)
     fp = BytesIO()
