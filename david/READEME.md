@@ -17,7 +17,7 @@
 
 ---
 
-## 🧹 문제 3: Python 프로젝트에서 .gitignore 사용 이유
+## 🧹 Python 프로젝트에서 .gitignore 사용 이유
 
 ### ✅ `__pycache__`, `.venv` 디렉토리 생성 이유
 
@@ -67,7 +67,7 @@ build/
 
 ---
 
-### ✅ 3-4. Flask 프로젝트 기준 `.gitignore`에 추가할 항목 예시
+### ✅ Flask 프로젝트 기준 `.gitignore`에 추가할 항목 예시
 
 ```gitignore
 # Python
