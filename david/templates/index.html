@@ -5,6 +5,7 @@
   <title>TTS 데모</title>
 </head>
 <body>
+  {{computername}}<p>
   <h1>텍스트 → 음성 변환</h1>
   
   <form method="POST">
@@ -21,6 +22,7 @@
 
     <button type="submit">음성 듣기</button>
   </form>
+	<img src="{{ url_for('static', filename='david.jpg') }}" alt="David">
 
   {% if error %}
     <p style="color:red;">{{ error }}</p>

@@ -3,6 +3,7 @@ from gtts import gTTS
 import io
 import base64
 import datetime
+import socket
 
 app = Flask(__name__)
 
@@ -57,9 +58,14 @@ def index():
                 app.logger.exception("gTTS 변환 중 오류")
                 error = '음성 변환 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.'
 
-    return render_template('index.html', error=error, audio=audio)
+    if app.debug:
+        hostname = '컴퓨터(인스턴스) : ' + socket.gethostname()
+    else:
+        hostname = ' '
+
+    return render_template('index.html', error=error, audio=audio, computername=hostname)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
