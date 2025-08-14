@@ -23,6 +23,10 @@ def log_input(text: str, lang: str):
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(entry)
 
+@app.route("/test2")
+def test2():
+    return render_template('test2.html')
+	
 @app.route('/menu', methods=['GET', 'POST'])
 def menu():
 	return render_template('menu.html')
