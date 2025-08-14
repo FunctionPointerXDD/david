@@ -23,15 +23,9 @@ def log_input(text: str, lang: str):
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(entry)
 
-<<<<<<< HEAD
 @app.route("/test1")
 def test1():
     return render_template('test1.html')
-=======
-@app.route("/test2")
-def test2():
-    return render_template('test2.html')
->>>>>>> 87b79233b7e0345fbfecbceb4e36c927e95ad086
 
 @app.route('/menu', methods=['GET', 'POST'])
 def menu():
