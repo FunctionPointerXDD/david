@@ -11,7 +11,7 @@ def multiply(a, b) -> int:
 def divide(a, b) -> float:
     if b == 0:
         print("Error: Division by zero.")
-        return None
+        raise ZeroDivisionError
     return a / b
 
 def main():
@@ -37,6 +37,9 @@ def main():
 
     except ValueError:
         print("Invalid input number.")
+        exit(1)
+
+    except ZeroDivisionError:
         exit(1)
 
 
